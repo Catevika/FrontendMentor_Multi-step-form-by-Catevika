@@ -91,7 +91,7 @@ const SelectPlanForm = () => {
 
           <fieldset tabIndex={0} className='toggle-circle' onKeyDown={handleToggleKeyDown}>
             <p className={isChecked ? 'toggle-text' : 'toggle-text checked'}>{paymentBasis[0]}</p>
-            <input type='checkbox' name='checkbox' role='checkbox' onChange={handleToggle} checked={isChecked} />
+            <input id='toggle' type='checkbox' name='checkbox' role='checkbox' onChange={handleToggle} checked={isChecked} />
             <label htmlFor='toggle'></label>
             <p className={!isChecked ? 'toggle-text' : 'toggle-text checked'}>{paymentBasis[1]}</p>
           </fieldset>
