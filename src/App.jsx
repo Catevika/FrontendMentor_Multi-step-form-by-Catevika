@@ -11,8 +11,6 @@ import { AddonListContextProvider } from './context/AddonListContext/AddonListCo
 import { PlanContextProvider } from './context/PlanContext/PlanContextProvider';
 import './App.css';
 
-// TODO: Voir pourquoi ça ne marche pas sur Iphone...
-
 function App() {
   return (
     <PlanContextProvider>
