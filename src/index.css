@@ -1,0 +1,98 @@
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --dark-purplish-blue: hsl(243, 100%, 63%);
+  --purplish-blue: hsl(243, 100%, 73%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+
+  --light-gray-shadow: 0px 5px 10px 0px var(--light-gray);
+
+  --margin-none: 0;
+  --margin-xxs: 0.2em;
+  --margin-xs: 0.5em;
+  --margin-s: 0.8em;
+  --margin-m: 1em;
+  --margin-l: 1.1em;
+  --margin-xl: 1.7em;
+  --margin-xxl: 2em;
+  --margin-xxxl: 2.9em;
+  --margin-xxxxl: 5em;
+
+  --padding-none: 0;
+  --padding-xxs: 0.2em;
+  --padding-xs: 0.5em;
+  --padding-s: 0.9em;
+  --padding-m: 1em;
+  --padding-l: 1.1em;
+  --padding-xl: 1.5em;
+  --padding-xxl: 1.7em;
+
+  --border-rad-input: 0.45em;
+  --border-rad-btn: 0.5em;
+  --border-rad-container: 1em;
+  --border-rad-checkbox: 2.5em;
+  --border-rad-step-btn: 50%;
+
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: var(--margin-none);
+  padding: var(--padding-none);
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+h1 {
+  display: none;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input::-webkit-input-placeholder {
+  font-family: inherit;
+}
+
+input::-moz-placeholder {
+  font-family: inherit;
+}
+
+input:-ms-input-placeholder {
+  font-family: inherit;
+}
+
+input::-ms-input-placeholder {
+  font-family: inherit;
+}
+
+button,
+input,
+input::placeholder {
+  font-family: inherit;
+}
