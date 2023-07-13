@@ -45,10 +45,8 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- React JSX
+- CSS Flexbox & Grid
 - Desktop-first workflow
 - [Vite](https://vitejs.dev/) + React plugin
 - [React-routeur-dom V6](https://reactrouter.com/en/main) - Client side routing for React
@@ -58,7 +56,7 @@ Users should be able to:
 - React Context: state management
 - CSS checkbox toggle: ssee Plan page
 - CSS Custom checkbox: see Addons page
-- Session storage for persistent states: see Summary page
+- Session storage for persistent states during session only: see Summary page
 - React-routeur-dom Outlet: see Summary - Main replaced by Summary - Thanks after confirmation
 
 ### Useful resources

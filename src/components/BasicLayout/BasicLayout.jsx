@@ -6,9 +6,6 @@ const BasicLayout = () => {
     <main className='main-page-container'>
       <div className='main-page'>
         <Sidebar />
-
-        <h1>Multi-step form</h1>
-
         <Outlet />
       </div>
     </main>

@@ -7,29 +7,32 @@ import Summary from './pages/Summary/Summary';
 import SummaryMain from './pages/Summary/SummaryMain/SummaryMain';
 import SummaryThanks from './pages/Summary/SummaryThanks/SummaryThanks';
 import NoMatch from './pages/NoMatch/NoMatch';
-import { AddonListContextProvider } from './context/AddonListContext/AddonListContextProvider';
+import { UserContextProvider } from './context/UserContext/UserContextProvider';
 import { PlanContextProvider } from './context/PlanContext/PlanContextProvider';
+import { AddonListContextProvider } from './context/AddonListContext/AddonListContextProvider';
 import './App.css';
 
 function App() {
   return (
-    <PlanContextProvider>
-      <AddonListContextProvider>
-        <Routes>
-          <Route path='/' element={<BasicLayout />} end>
+    <UserContextProvider>
+      <PlanContextProvider>
+        <AddonListContextProvider>
+          <Routes>
+            <Route path='/' element={<BasicLayout />} end>
 
-            <Route path='/' element={<PersonalInfoForm />} />
-            <Route path='plan' element={<SelectPlanForm />} />
-            <Route path='addons' element={<AddonsForm />} />
-            <Route path='summary' element={<Summary />}>
-              <Route path='main' element={<SummaryMain />} />
-              <Route path='thanks' element={<SummaryThanks />} />
+              <Route path='/' element={<PersonalInfoForm />} />
+              <Route path='plan' element={<SelectPlanForm />} />
+              <Route path='addons' element={<AddonsForm />} />
+              <Route path='summary' element={<Summary />}>
+                <Route path='main' element={<SummaryMain />} />
+                <Route path='thanks' element={<SummaryThanks />} />
+              </Route>
+              <Route path='*' element={<NoMatch />} />
             </Route>
-            <Route path='*' element={<NoMatch />} />
-          </Route>
-        </Routes>
-      </AddonListContextProvider>
-    </PlanContextProvider>
+          </Routes>
+        </AddonListContextProvider>
+      </PlanContextProvider>
+    </UserContextProvider>
   );
 }
 

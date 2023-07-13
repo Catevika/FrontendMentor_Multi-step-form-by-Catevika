@@ -1,10 +1,21 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext/UserContext';
 import bgDesktop from '../../assets/images/bg-sidebar-desktop.svg';
 import bgMobile from '../../assets/images/bg-sidebar-mobile.svg';
 import './Sidebar.css';
+import { useContext } from 'react';
+
+// TODO: Create user Context or mix with Addons + Plan
 
 const Sidebar = () => {
   const location = useLocation();
+  const { user } = useContext(UserContext);
+  const { username, email, phone } = user;
+
+  const handleClick = (e) => {
+    const isUserDefined = username !== '' && email !== '' && phone !== '';
+    if (!isUserDefined) e.preventDefault();
+  };
 
   return (
     <header className='sidebar-container'>
@@ -15,7 +26,7 @@ const Sidebar = () => {
           className={({ isActive }) =>
             isActive ? 'sidebar-item active' : 'sidebar-item'
           }>
-          <div aria-hidden='true' className='step-btn'>1</div>
+          <div className='step-btn'>1</div>
           <div className='step-info'>
             <p className='step-number'>Step 1</p>
             <p className='step-text'>Your info</p>
@@ -23,10 +34,11 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink to={'/plan'}
+          onClick={handleClick}
           className={({ isActive }) =>
             isActive ? 'sidebar-item active' : 'sidebar-item'
           }>
-          <div aria-hidden='true' className='step-btn'>2</div>
+          <div className='step-btn'>2</div>
           <div className='step-info'>
             <p className='step-number'>Step 2</p>
             <p className='step-text'>Select plan</p>
@@ -34,10 +46,11 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink to='/addons'
+          onClick={handleClick}
           className={({ isActive }) =>
             isActive ? 'sidebar-item active' : 'sidebar-item'
           }>
-          <div aria-hidden='true' className='step-btn'>3</div>
+          <div className='step-btn'>3</div>
           <div className='step-info'>
             <p className='step-number'>Step 3</p>
             <p className='step-text'>Add-ons</p>
@@ -45,6 +58,7 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink to={'/summary/main'}
+          onClick={handleClick}
           className={({ isActive }) =>
             isActive ? 'sidebar-item active' : 'sidebar-item'
           }>

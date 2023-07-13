@@ -257,14 +257,9 @@
 
 .form-label {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   font-weight: 500;
   width: 100%;
-}
-
-.form-label p {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: var(--margin-xs);
 }
 

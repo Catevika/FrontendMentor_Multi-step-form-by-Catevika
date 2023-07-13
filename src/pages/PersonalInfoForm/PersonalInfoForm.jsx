@@ -71,19 +71,19 @@ const PersonalInfoForm = () => {
         <form className='form' onSubmit={handleSubmit}>
           <div className='form-content'>
             <label htmlFor='username' className='form-label'>
-              <p>Name {username === '' ? <span className='form-error'>{error}</span> : null}</p>
-              <input id='username' type='text' name='username' placeholder='e.g. Stephen King' autoComplete='username' className={usernameStyle} onChange={e => { validateUsername(e.target.value); setUsername(e.target.value); }} value={username} />
+              Name {username === '' ? <span className='form-error'>{error}</span> : null}
             </label>
+            <input id='username' type='text' placeholder='e.g. Stephen King' autoComplete='username' className={usernameStyle} onChange={e => { validateUsername(e.target.value); setUsername(e.target.value); }} value={username} />
 
             <label htmlFor='email' className='form-label'>
-              <p>Email Address {email === '' ? <span className='form-error'>{error}</span> : null}</p>
-              <input id='email' type='email' name='email' placeholder='e.g. stephenking@lorem.com' autoComplete='email' className={emailStyle} onChange={e => { validateEmail(e.target.value); setEmail(e.target.value); }} value={email} />
+              Email Address {email === '' ? <span className='form-error'>{error}</span> : null}
             </label>
+            <input id='email' type='email' placeholder='e.g. stephenking@lorem.com' autoComplete='email' className={emailStyle} onChange={e => { validateEmail(e.target.value); setEmail(e.target.value); }} value={email} />
 
             <label htmlFor='phone' className='form-label'>
-              <p>Phone Number {phone === '' ? <span className='form-error'>{error}</span> : null}</p>
-              <input id='phone' type='tel' name='phone' placeholder='e.g. +1 234 567 890' autoComplete='tel' className={phoneStyle} onChange={e => { validatePhone(e.target.value); setPhone(e.target.value); }} value={phone} />
+              Phone Number {phone === '' ? <span className='form-error'>{error}</span> : null}
             </label>
+            <input id='phone' type='tel' placeholder='e.g. +1 234 567 890' autoComplete='tel' className={phoneStyle} onChange={e => { validatePhone(e.target.value); setPhone(e.target.value); }} value={phone} />
           </div>
 
           <div className='form-btn-container'>

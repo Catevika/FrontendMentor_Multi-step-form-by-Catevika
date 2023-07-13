@@ -63,9 +63,9 @@ const SelectPlanForm = () => {
     return (
       <li key={i} tabIndex={0} className={i === (selectedIndex) ? 'card selected' : 'card'} role='tab' onClick={() => { setSelectedIndex(i); selectPlan(plan); }} onKeyDown={(e) => { if (e.code === 'Enter') { setSelectedIndex(i); selectPlan(plan); } }} >
         {
-          plan.name === 'Arcade' ? <img src={iconArcade} aria-hidden='true' focusable='false' alt='' className='card-icon' /> :
-            plan.name === 'Advanced' ? <img src={iconAdvanced} aria-hidden='true' focusable='false' alt='' className='card-icon' /> :
-              <img src={iconPro} aria-hidden='true' focusable='false' alt='' className='card-icon' />
+          plan.name === 'Arcade' ? <img src={iconArcade} alt='' className='card-icon' /> :
+            plan.name === 'Advanced' ? <img src={iconAdvanced} alt='' className='card-icon' /> :
+              <img src={iconPro} alt='' className='card-icon' />
         }
         < div className='card-info' >
           <h3 className='card-title'>{plan.name}</h3>
