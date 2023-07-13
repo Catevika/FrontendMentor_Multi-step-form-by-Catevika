@@ -5,8 +5,6 @@ import bgMobile from '../../assets/images/bg-sidebar-mobile.svg';
 import './Sidebar.css';
 import { useContext } from 'react';
 
-// TODO: Create user Context or mix with Addons + Plan
-
 const Sidebar = () => {
   const location = useLocation();
   const { user } = useContext(UserContext);
